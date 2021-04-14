@@ -1,0 +1,10 @@
+.course-card{
+    margin: 1em;
+    border: 2px solid #5a6f83;
+}
+.course-card img{
+    width: 100%;
+}
+.info-course-container{
+    padding: 1em;
+}

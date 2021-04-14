@@ -7,8 +7,7 @@ const HeaderMain = () => {
         <div className="header-main d-flex justify-content-center align-items-center">
             <div>
                 <h1>Restless learners <br /> change the world</h1>
-                <p className="text-center"><button onClick={() => history.push('/courses')} className="btn btn-success btn-lg">Learn With NEXT Level</button></p>
-                
+                <p className="text-center"><button onClick={() => history.push('/courses')} className="btn btn-success btn-lg">Learn With NEXT Level</button></p>    
             </div>
         </div>
     );

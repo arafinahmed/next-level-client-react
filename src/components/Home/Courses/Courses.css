@@ -1,0 +1,22 @@
+.courses-container{
+    background-color: #c6cfd8;
+}
+
+.all-courses{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media only screen and (max-width: 992px) {
+    .all-courses{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }   
+    
+}
+@media only screen and (max-width: 768px) {
+    .all-courses{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+}
