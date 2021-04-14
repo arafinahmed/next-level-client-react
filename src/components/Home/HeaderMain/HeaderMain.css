@@ -1,0 +1,26 @@
+.header-main{
+    background-image: url(../../../images/mainBg3.jpg);
+    background-size: cover;
+    height: 80vh;
+}
+.header-main h1{
+    position: relative;
+    font-size: 100px;
+    color: white;
+}
+@media only screen and (max-width: 992px) {
+    
+    .header-main h1{
+        position: relative;
+        font-size: 4em;
+        color: white;
+    }
+}
+@media only screen and (max-width: 768px) {
+    
+    .header-main h1{
+        position: relative;
+        font-size: 3em;
+        color: white;
+    }
+}

@@ -1,14 +1,16 @@
 import React from 'react';
 import { Nav, Navbar } from "react-bootstrap";
 import { useHistory } from 'react-router';
+import './NavigationBar.css';
 
 const NavigationBar = () => {
   let history = useHistory();
   const linkNavigate = (linkPath) => {
     history.push(linkPath);
   }
+  // #e2e6ea
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar className="navigation-bg" collapseOnSelect expand="lg"  variant="light">
       <div className="container">
         <Navbar.Brand>
           NEXT Level

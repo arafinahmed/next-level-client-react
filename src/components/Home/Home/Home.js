@@ -1,11 +1,10 @@
 import React from 'react';
-import NavigationBar from '../NavigationBar/NavigationBar';
+import Header from '../Header/Header';
 
 const Home = () => {
     return (
         <div>
-            <NavigationBar></NavigationBar>
-            <h1>This is home page</h1>
+            <Header></Header>
         </div>
     );
 };
