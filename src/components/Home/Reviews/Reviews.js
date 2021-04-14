@@ -28,7 +28,7 @@ const reviewData = [
 
 const Reviews = () => {
     return (
-       <section className="reviews my-5 py-5">
+       <section className="reviews my-5 py-3">
            <div className="container">
                <div className="section-header">
                    <h1 className="text-center">What Our Students Says </h1>
