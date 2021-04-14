@@ -1,0 +1,36 @@
+.footer-container{
+    background-color: #c6cfd8;
+}
+.social-media .icon{
+    height: 40px;
+    width: 40px;
+    color: #404b4a;
+    border-radius: 50%;
+    border: 1px solid #181d1d;
+    padding: 10px;
+}
+.social-media li{
+    display: inline-block;
+    padding: 0em 1em;    
+}
+.mail-container{
+    text-align: right;
+}
+.next-level{
+    padding-left: 58px;
+}
+.next-level2{
+    padding-left: 74px;
+}
+
+@media only screen and (max-width: 992px) {
+    
+    
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .mail-container{
+        text-align: left;
+    }
+}

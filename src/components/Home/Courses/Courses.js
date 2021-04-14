@@ -10,7 +10,7 @@ const courses = [
         img: linux
     },
     {
-        title: "JavaScript",
+        title: "Linux System Administration",
         fee: 501,
         shortDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit ab sapiente maxime sequi perferendis, dolore doloremque quam adipisci totam quaerat.",
         img: linux
@@ -25,7 +25,7 @@ const courses = [
 const Courses = () => {
     return (
         <div className="courses-container">
-            <h2 className="text-center">Boost Up Your Skill With NEXT Level</h2>
+            <h2 className="text-center pt-3">Boost Up Your Skill With NEXT Level</h2>
             <div className="container all-courses">
             {
                 courses.map(course => <CourseCard key={course.fee} course={course}></CourseCard>)
