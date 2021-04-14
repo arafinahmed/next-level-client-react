@@ -3,7 +3,7 @@ import './CourseCard.css';
 
 const CourseCard = ({course}) => {
     return (
-        <div className="course-card">
+        <div className="course-card shadow-sm">
             <img  src={course.img} alt=""/>
             <div className="info-course-container">
             <h5>{course.title}</h5>
