@@ -5,16 +5,24 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
+import { createContext, useState } from 'react';
+import LoginPage from './components/Login/LoginPage/LoginPage';
+export const ContextApi = createContext();
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <Router>
-      <Switch>
-        <Route>
-          <Home></Home>
-        </Route>
-      </Switch>
-    </Router>
+    <ContextApi.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/:login">
+              <LoginPage></LoginPage>
+          </Route>
+        </Switch>
+      </Router>
+    </ContextApi.Provider>
   );
 }
 

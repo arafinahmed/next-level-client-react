@@ -23,7 +23,7 @@ const NavigationBar = () => {
           </Nav>
           <Nav>
             <Nav.Link onClick={() => linkNavigate('/login')}>Login</Nav.Link>
-            <Nav.Link eventKey={2} onClick={() => linkNavigate('/login')}>
+            <Nav.Link eventKey={2} onClick={() => linkNavigate('/join')}>
               Join Now
           </Nav.Link>
           </Nav>
