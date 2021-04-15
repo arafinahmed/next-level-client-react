@@ -12,12 +12,12 @@ const CourseCard = ({course}) => {
     }
     return (
         <div className="course-card shadow-sm">
-            <img  src={course.img} alt=""/>
+            <img  src={`data:${course.img.contentType};base64,${course.img.img}`} alt=""/>
             <div className="info-course-container">
             <h5>{course.title}</h5>
             <p>{course.shortDescription}</p>
             <div className="d-flex justify-content-between">
-                <button onClick={() => bookNow(course.id) } className="btn btn-success">Book</button>
+                <button onClick={() => bookNow(course._id) } className="btn btn-success">Book</button>
                 <button className="btn">${course.fee}</button>
             </div>
             </div>

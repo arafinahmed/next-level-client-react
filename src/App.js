@@ -11,6 +11,8 @@ import NavigationBar from './components/Home/NavigationBar/NavigationBar';
 import Footer from './components/Shared/Footer/Footer';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Checkout from './components/Dashboard/Checkout/Checkout';
+import NewAdmin from './components/Dashboard/NewAdmin/NewAdmin';
+import NewCourse from './components/Dashboard/NewCourse/NewCourse';
 export const ContextApi = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -28,6 +30,13 @@ function App() {
           </Route>
           <Route path="/checkout">
               <Checkout></Checkout>
+          </Route>
+          {/* private */}
+          <Route path="/newAdmin">
+              <NewAdmin></NewAdmin>
+          </Route>
+          <Route path="/newCourse">
+              <NewCourse></NewCourse>
           </Route>
         </Switch>
       <Footer></Footer>
