@@ -7,19 +7,22 @@ const courses = [
         title: "JavaScript",
         fee: 500,
         shortDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit ab sapiente maxime sequi perferendis, dolore doloremque quam adipisci totam quaerat.",
-        img: linux
+        img: linux,
+        id: 1
     },
     {
         title: "Linux System Administration",
         fee: 501,
         shortDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit ab sapiente maxime sequi perferendis, dolore doloremque quam adipisci totam quaerat.",
-        img: linux
+        img: linux,
+        id: 2
     },
     {
         title: "JavaScript",
         fee: 502,
         shortDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit ab sapiente maxime sequi perferendis, dolore doloremque quam adipisci totam quaerat.",
-        img: linux
+        img: linux,
+        id: 3
     }
 ]
 const Courses = () => {

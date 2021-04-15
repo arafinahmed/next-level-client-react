@@ -7,7 +7,7 @@ import SignUpArea from '../SignUpArea/SignUpArea';
 import './LoginPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGoogle} from '@fortawesome/free-brands-svg-icons'
-import NavigationBar from '../../Home/NavigationBar/NavigationBar';
+
 
 const element = <FontAwesomeIcon icon={faGoogle} />
 
@@ -19,6 +19,7 @@ const LoginPage = () => {
     let history = useHistory();
     let location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
+    console.log(from);
     useEffect(() => {
         if (login === 'login'){
             setIsNewUser(false);
@@ -45,8 +46,7 @@ const LoginPage = () => {
         }
     }
     return (
-        <div>
-            <NavigationBar></NavigationBar>
+        <div className="login-page-container">
             <br/>
 
             {
@@ -59,12 +59,12 @@ const LoginPage = () => {
                         isNewUser ?
                             <>
                                 <span>Already Have Account? </span>
-                                <button className="signup-signin" onClick={() => history.push('/login')}>Sign in</button>
+                                <button className="signup-signin" onClick={() => history.push('/account/login')}>Sign in</button>
                             </>
                             :
                             <>
                                 <span>Don't Have Account? </span>
-                                <button className="signup-signin " onClick={() => history.push('/join')}>Sign up</button>
+                                <button className="signup-signin " onClick={() => history.push('/account/join')}>Sign up</button>
                             </>
                     }
                 </div>

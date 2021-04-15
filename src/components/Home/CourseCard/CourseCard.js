@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useHistory } from 'react-router';
+import { ContextApi } from '../../../App';
 import './CourseCard.css';
 
 const CourseCard = ({course}) => {
+    let history = useHistory();
+    const setSelectedCourseID = useContext(ContextApi)[3];
+    const bookNow = (id) => {
+        history.replace(`/checkout`);
+        setSelectedCourseID(id);
+    }
     return (
         <div className="course-card shadow-sm">
             <img  src={course.img} alt=""/>
@@ -9,8 +17,8 @@ const CourseCard = ({course}) => {
             <h5>{course.title}</h5>
             <p>{course.shortDescription}</p>
             <div className="d-flex justify-content-between">
-                <button className="btn btn-success">Book</button>
-                <button className="btn">$500</button>
+                <button onClick={() => bookNow(course.id) } className="btn btn-success">Book</button>
+                <button className="btn">${course.fee}</button>
             </div>
             </div>
         </div>

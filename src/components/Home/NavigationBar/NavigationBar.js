@@ -18,12 +18,12 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link onClick={() => linkNavigate('/home')}>Home</Nav.Link>
+            <Nav.Link onClick={() => linkNavigate('/')}>Home</Nav.Link>
             <Nav.Link onClick={() => linkNavigate('/courses')}>Courses</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link onClick={() => linkNavigate('/login')}>Login</Nav.Link>
-            <Nav.Link eventKey={2} onClick={() => linkNavigate('/join')}>
+            <Nav.Link onClick={() => linkNavigate('/account/login')}>Login</Nav.Link>
+            <Nav.Link eventKey={2} onClick={() => linkNavigate('/account/join')}>
               Join Now
           </Nav.Link>
           </Nav>

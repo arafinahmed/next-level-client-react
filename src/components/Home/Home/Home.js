@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../../Shared/Footer/Footer';
 import Courses from '../Courses/Courses';
 import Header from '../Header/Header';
 import LearnFromExpert from '../LearnFromExpert/LearnFromExpert';
@@ -12,7 +11,6 @@ const Home = () => {
             <Courses></Courses>
             <Reviews></Reviews>
             <LearnFromExpert></LearnFromExpert>
-            <Footer></Footer>
         </div>
     );
 };
