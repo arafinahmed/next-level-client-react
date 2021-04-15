@@ -36,8 +36,13 @@ const Checkout = () => {
     const selectedCourseID = useContext(ContextApi)[2];
     const [courseInfo, setCourseInfo] = useState({});
     useEffect(() => {
-        const filtered = courses.find(course => course.id === selectedCourseID);
-        setCourseInfo(filtered);
+        fetch(`http://localhost:8888/course/${selectedCourseID}`)
+        .then(res => res.json())
+        .then(result => {
+            setCourseInfo(result)
+            
+        })
+        
     }, [selectedCourseID])
     console.log(selectedCourseID);
     console.log(courseInfo);
@@ -48,7 +53,7 @@ const Checkout = () => {
             <DashboardNav></DashboardNav>
             <div className="checkout-container">
                 {
-                    courseInfo ? <>
+                    courseInfo.title ? <>
                         <p><strong>Course Name: </strong> {courseInfo.title}</p>
                         <p><strong>Course Fee: </strong> ${courseInfo.fee}</p>
                         <p>Arafin Ahmed - arafin2021@gmail.com</p>
