@@ -20,6 +20,7 @@ const NavigationBar = () => {
           <Nav className="mr-auto">
             <Nav.Link onClick={() => linkNavigate('/')}>Home</Nav.Link>
             <Nav.Link onClick={() => linkNavigate('/courses')}>Courses</Nav.Link>
+            <Nav.Link onClick={() => linkNavigate('/dashboard')}>Dashboard</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link onClick={() => linkNavigate('/account/login')}>Login</Nav.Link>
