@@ -73,7 +73,7 @@ const LoginPage = () => {
             <br/>
             <p className="text-center">------------------or------------------</p>
             <div className="d-flex justify-content-center">
-                <button className="signup-signin btn btn-success btn-lg" onClick={loginWithGoogle}>{element} Login with google</button>
+                <button className="btn btn-success btn-lg" onClick={loginWithGoogle}>{element} Login with google</button>
             </div>
 
         </div>
