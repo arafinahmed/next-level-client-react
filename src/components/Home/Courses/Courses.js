@@ -25,7 +25,8 @@ const courses = [
 const Courses = () => {
     return (
         <div className="courses-container">
-            <h2 className="text-center">Boost Up Your Skill With NEXT Level</h2>
+            <h1 className="text-center">Boost Up Your Skill With NEXT Level</h1>
+            <br/>
             <div className="container all-courses">
             {
                 courses.map(course => <CourseCard key={course.fee} course={course}></CourseCard>)

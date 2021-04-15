@@ -1,0 +1,31 @@
+.expert-learn{
+    background-image: url(../../../images/expertCover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.expert-learn h1{
+    position: relative;
+    font-size: 80px;
+    color: white;
+}
+@media only screen and (max-width: 992px) {
+    
+    .expert-learn h1{
+        position: relative;
+        font-size: 4em;
+        color: white;
+    }
+}
+@media only screen and (max-width: 768px) {
+    
+    .expert-learn h1{
+        position: relative;
+        font-size: 3em;
+        color: white;
+    }
+}
