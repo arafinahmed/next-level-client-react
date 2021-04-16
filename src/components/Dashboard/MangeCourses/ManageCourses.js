@@ -26,7 +26,7 @@ const ManageCourses = () => {
         fetch('http://localhost:8888/allCourses')
         .then(res => res.json())
         .then(data => setAllCourses(data));
-    }, []);
+    }, [deleted]);
     
     const deleteProduct = (id) => {
         fetch(`http://localhost:8888/deleteCourse/${id}`, {
