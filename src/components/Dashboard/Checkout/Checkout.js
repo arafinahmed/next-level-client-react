@@ -13,6 +13,7 @@ const Checkout = () => {
             courseId: courseInfo._id,
             courseTitle: courseInfo.title,
             paymentId: paymentId,
+            courseStatus: 'Not Started',
             enrollTime: new Date()
         }
         fetch('http://localhost:8888/addStudent', {

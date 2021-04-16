@@ -14,6 +14,7 @@ import Checkout from './components/Dashboard/Checkout/Checkout';
 import NewAdmin from './components/Dashboard/NewAdmin/NewAdmin';
 import NewCourse from './components/Dashboard/NewCourse/NewCourse';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import MyCourses from './components/Dashboard/MyCourses/MyCourses';
 export const ContextApi = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -33,15 +34,18 @@ function App() {
               <Checkout></Checkout>
           </PrivateRoute>
           {/* private */}
-          <Route path="/newAdmin">
+          <PrivateRoute path="/newAdmin">
               <NewAdmin></NewAdmin>
-          </Route>
-          <Route path="/newCourse">
+          </PrivateRoute>
+          <PrivateRoute path="/newCourse">
               <NewCourse></NewCourse>
-          </Route>
-          <Route path="/dashboard">
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/mycourses">
+              <MyCourses></MyCourses>
+          </PrivateRoute>
         </Switch>
       <Footer></Footer>
       </Router>
