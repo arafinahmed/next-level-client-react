@@ -11,6 +11,20 @@ const StatusUpdate = ({courseStatus, id}) => {
     console.log(id);
     const changeStatus = (id) => {
         console.log(id, status);
+        fetch('http://localhost:8888/updateStatus', {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body:JSON.stringify({id, status})
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data){
+                alert("Status Updated");
+            }
+            else{
+                alert("Status not updated");
+            }
+        })
         
     }
     return (
