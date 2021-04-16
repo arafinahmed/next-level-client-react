@@ -23,13 +23,13 @@ const ManageCourses = () => {
     const [deleted, setDeleted] = useState(false);
     const rows = allCourses;
     useEffect(() => {
-        fetch('http://localhost:8888/allCourses')
+        fetch('https://nextlevel1.herokuapp.com/allCourses')
         .then(res => res.json())
         .then(data => setAllCourses(data));
     }, [deleted]);
     
     const deleteProduct = (id) => {
-        fetch(`http://localhost:8888/deleteCourse/${id}`, {
+        fetch(`https://nextlevel1.herokuapp.com/deleteCourse/${id}`, {
             method: 'delete'
         })
         .then(res => res.json())

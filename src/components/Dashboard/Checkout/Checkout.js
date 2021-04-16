@@ -16,7 +16,7 @@ const Checkout = () => {
             courseStatus: 'Not Started',
             enrollTime: new Date()
         }
-        fetch('http://localhost:8888/addStudent', {
+        fetch('https://nextlevel1.herokuapp.com/addStudent', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(studentDetails)
@@ -36,7 +36,7 @@ const Checkout = () => {
     const selectedCourseID = useContext(ContextApi)[2];
     const [courseInfo, setCourseInfo] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:8888/course/${selectedCourseID}`)
+        fetch(`https://nextlevel1.herokuapp.com/course/${selectedCourseID}`)
         .then(res => res.json())
         .then(result => {
             setCourseInfo(result)

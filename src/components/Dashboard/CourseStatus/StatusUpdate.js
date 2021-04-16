@@ -11,7 +11,7 @@ const StatusUpdate = ({courseStatus, id}) => {
     console.log(id);
     const changeStatus = (id) => {
         console.log(id, status);
-        fetch('http://localhost:8888/updateStatus', {
+        fetch('https://nextlevel1.herokuapp.com/updateStatus', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body:JSON.stringify({id, status})
@@ -33,7 +33,7 @@ const StatusUpdate = ({courseStatus, id}) => {
             <Select options={options}
                 onChange = {value => setStatus(value.value)}
                 defaultValue={{ label: courseStatus, value: courseStatus }} />
-            <button onClick={() => changeStatus(id)}>Ok</button>
+            <button onClick={() => changeStatus(id)}>Change</button>
             
         </div>
     );
