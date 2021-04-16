@@ -11,6 +11,7 @@ const DashboardNav = () => {
                     <li><Link style={{ textDecoration: 'none', color:'black' }} to="/checkout">Checkout</Link></li>
                     <li><Link style={{ textDecoration: 'none', color:'black' }} to="/mycourses">My Courses</Link></li>
                     <li><Link style={{ textDecoration: 'none', color:'black' }} to="/addReview">Review</Link></li>
+                    <li><Link style={{ textDecoration: 'none', color:'black' }} to="/manageCourses">Manage Course</Link></li>
                 </ul>
             </nav>
         </div>

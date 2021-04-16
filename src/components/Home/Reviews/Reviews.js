@@ -1,30 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './Reviews.css';
-import wilson from '../../../images/wilson.png';
-import ema from '../../../images/ema.png';
-import aliza from '../../../images/aliza.png';
+
 import Review from '../Review/Review';
 
-const reviewData = [
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Wilson Harry',
-        from : 'California',
-        img : wilson
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Ema Gomez',
-        from : 'California',
-        img : ema
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Aliza Farari',
-        from : 'California',
-        img : aliza
-    }
-]
+
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
