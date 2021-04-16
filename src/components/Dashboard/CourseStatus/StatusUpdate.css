@@ -1,0 +1,4 @@
+.status-update{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}

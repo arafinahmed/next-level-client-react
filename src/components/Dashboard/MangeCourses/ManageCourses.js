@@ -9,7 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-
+import './ManageCourses.css';
 
 const useStyles = makeStyles({
     table: {
@@ -48,6 +48,7 @@ const ManageCourses = () => {
         <div className="dashboard-container">
             <DashboardNav></DashboardNav>
             <div className="checkout-container">
+                <h4>Manage Courses</h4>
             <TableContainer component={Paper}>
                             <Table className={classes.table} size="small" aria-label="a dense table">
                                 <TableHead>
@@ -59,7 +60,7 @@ const ManageCourses = () => {
                                 </TableHead>
                                 <TableBody>
                                     {rows.map((row) => (
-                                        <TableRow key={row.name}>
+                                        <TableRow key={row._id}>
                                             <TableCell component="th" scope="row">
                                                 {row.title}
                                             </TableCell>
