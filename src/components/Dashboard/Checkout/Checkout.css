@@ -1,6 +1,6 @@
 .dashboard-nav li{
     display: flex;
-    padding: 0.5em 0;    
+    padding: 0.5em 0.5em;    
 }
 .dashboard-container{
     display: flex;

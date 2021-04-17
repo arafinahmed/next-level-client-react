@@ -37,7 +37,9 @@ const NavigationBar = () => {
           </Nav>
           <Nav>
             {
-              active ? <> <Nav.Link onClick={() => setLoggedInUser({})}>Logout</Nav.Link> </> :
+              active ? <> 
+              <Nav.Link onClick={() => linkNavigate('/')}>{loggedInUser.displayName}</Nav.Link>
+              <Nav.Link onClick={() => setLoggedInUser({})}>Logout</Nav.Link> </> :
               <>
               <Nav.Link onClick={() => linkNavigate('/account/login')}>Login</Nav.Link>
             <Nav.Link eventKey={2} onClick={() => linkNavigate('/account/join')}>
