@@ -2,9 +2,7 @@
     margin: 1em;
     background-color: #8ba6c0;
 }
-.course-card img{
-    width: 100%;
-}
+
 .course-card h5{
     color: white;
 }
@@ -15,5 +13,17 @@
     padding: 1em;
 }
 .course-card img:hover{
-    transform: scale(1.2);
+    opacity: .7;
+  -webkit-transform: scale(1.05,1.07);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 250ms;
+  -moz-transform: scale(1.05,1.07);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 250ms;
+  position: relative;
+  z-index: 99;
+  overflow: hidden;
+}
+.course-card img{
+    width: 100%;
 }
