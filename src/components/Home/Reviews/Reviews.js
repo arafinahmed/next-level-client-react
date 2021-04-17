@@ -17,9 +17,9 @@ const Reviews = () => {
        <section className="reviews my-5 py-3">
            <div className="container">
                <div className="section-header">
-                   <h1 className="text-center">What Our Students Says </h1>
+                   <h3 className="text-center m-5">What Our Students Says </h3>
                </div>
-               <div className="card-deck mt-5">
+               <div className="reviews-card-container">
                     {
                         reviews.map(review => <Review review={review} key={review._id}/>)
                     }

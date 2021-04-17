@@ -7,17 +7,21 @@
     color: #404b4a;
     border-radius: 50%;
     border: 1px solid #181d1d;
-    padding: 10px;
+    padding: 5px 10px;
+
 }
 .social-media li{
     display: inline-block;
     padding: 0em 1em 0 0;    
 }
-.mail-container{
+
+
+.align-right{
     text-align: right;
 }
-.next-level{
-    padding-left: 58px;
+.rowAlign{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 
@@ -28,8 +32,12 @@
 
 @media only screen and (max-width: 768px) {
     
-    .mail-container{
+    .align-right{
         text-align: left;
+    }
+    .rowAlign{
+        display: grid;
+        grid-template-columns: 1fr;
     }
     
 }

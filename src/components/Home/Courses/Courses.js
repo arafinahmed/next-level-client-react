@@ -12,7 +12,7 @@ const Courses = () => {
     console.log(allCourses);
     return (
         <div className="courses-container">
-            <h1 className="text-center">Boost Up Your Skill With NEXT Level</h1>
+            <h3 className="text-center">Boost Up Your Skill With NEXT Level</h3>
             <br/>
             <div className="container all-courses">
             {

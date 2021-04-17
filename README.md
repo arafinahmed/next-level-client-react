@@ -1,6 +1,6 @@
 # NEXT Level -- A Complete Website
 ## Client Site
-Live Website Link: https://next-level1.web.app/dashboard
+Live Website Link: https://next-level1.web.app/
 
 ### Components
 For understanding this project check the component folder. And you can change as your need.

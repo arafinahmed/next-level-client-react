@@ -7,3 +7,25 @@
     background: transparent;
     border: 0;
 }
+.reviews-card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+@media only screen and (max-width: 992px) {
+    .reviews-card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    .reviews-card-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+    
+}
