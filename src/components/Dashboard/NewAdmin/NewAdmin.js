@@ -5,7 +5,7 @@ const NewAdmin = () => {
     const handleSubmit = (e) => {
         const email = e.target.email.value;
         e.target.email.value = "";
-        fetch('https://nextlevel1.herokuapp.com/addAdmin', {
+        fetch('http://localhost:8888/addAdmin', {
             method:'POST',
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({email})

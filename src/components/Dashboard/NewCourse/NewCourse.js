@@ -17,7 +17,7 @@ const NewCourse = () => {
         formData.append('title', title);
         formData.append('fee', fee);
         formData.append('shortDescription', shortDescription);
-        fetch('https://nextlevel1.herokuapp.com/addCourse', {
+        fetch('http://localhost:8888/addCourse', {
             method: 'POST',
             body: formData
         })

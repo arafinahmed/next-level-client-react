@@ -5,7 +5,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import LoginPage from './components/Login/LoginPage/LoginPage';
 import NavigationBar from './components/Home/NavigationBar/NavigationBar';
 import Footer from './components/Shared/Footer/Footer';
@@ -22,44 +22,64 @@ export const ContextApi = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   const [selectedCourseID, setSelectedCourseID] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    if (loggedInUser.email) {
+      fetch(`http://localhost:8888/isAdmin?email=${loggedInUser.email}`)
+        .then(res => res.json())
+        .then(data => setIsAdmin(data))
+    }
+  }, [loggedInUser])
+
   return (
-    <ContextApi.Provider value={[loggedInUser, setLoggedInUser, selectedCourseID, setSelectedCourseID]}>
+    <ContextApi.Provider value={[loggedInUser, setLoggedInUser, selectedCourseID, setSelectedCourseID, isAdmin]}>
       <Router>
-      <NavigationBar></NavigationBar>
+        <NavigationBar></NavigationBar>
         <Switch>
           <Route exact path="/">
             <Home></Home>
           </Route>
           <Route exact path="/account/:login">
-              <LoginPage></LoginPage>
+            <LoginPage></LoginPage>
           </Route>
-          <PrivateRoute path="/checkout">
-              <Checkout></Checkout>
-          </PrivateRoute>
-          {/* private */}
-          <PrivateRoute path="/newAdmin">
-              <NewAdmin></NewAdmin>
-          </PrivateRoute>
-          <PrivateRoute path="/newCourse">
-              <NewCourse></NewCourse>
-          </PrivateRoute>
+
           <PrivateRoute path="/dashboard">
-              <Dashboard></Dashboard>
+            <Dashboard></Dashboard>
           </PrivateRoute>
-          <PrivateRoute path="/mycourses">
-              <MyCourses></MyCourses>
-          </PrivateRoute>
-          <PrivateRoute path="/addReview">
-              <AddReview></AddReview>
-          </PrivateRoute>
-          <PrivateRoute path="/manageCourses">
-              <ManageCourses></ManageCourses>
-          </PrivateRoute>
-          <PrivateRoute path="/courseStatus">
-              <CourseStatus></CourseStatus>
-          </PrivateRoute>
+
+          {/* private */}
+          {
+            isAdmin ? <>
+              <PrivateRoute path="/newAdmin">
+                <NewAdmin></NewAdmin>
+              </PrivateRoute>
+              <PrivateRoute path="/newCourse">
+                <NewCourse></NewCourse>
+              </PrivateRoute>
+              <PrivateRoute path="/manageCourses">
+                <ManageCourses></ManageCourses>
+              </PrivateRoute>
+              <PrivateRoute path="/courseStatus">
+                <CourseStatus></CourseStatus>
+              </PrivateRoute>
+            </> : <>
+              <PrivateRoute path="/checkout">
+                <Checkout></Checkout>
+              </PrivateRoute>
+              <PrivateRoute path="/mycourses">
+                <MyCourses></MyCourses>
+              </PrivateRoute>
+              <PrivateRoute path="/addReview">
+                <AddReview></AddReview>
+              </PrivateRoute>
+            </>
+          }
+
+
+
         </Switch>
-      <Footer></Footer>
+        <Footer></Footer>
       </Router>
     </ContextApi.Provider>
   );

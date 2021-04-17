@@ -8,7 +8,7 @@ const MyCourses = () => {
     const [loggedInUser] = useContext(ContextApi);
     const [courses, setCourses] = useState([]);
     useEffect(() => {
-        fetch(`https://nextlevel1.herokuapp.com/enrolledCourses?email=${loggedInUser.email}`, {
+        fetch(`http://localhost:8888/enrolledCourses?email=${loggedInUser.email}`, {
             method: 'GET'
         })
             .then(res => res.json())

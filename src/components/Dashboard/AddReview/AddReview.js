@@ -10,7 +10,7 @@ const AddReview = () => {
         const review = e.target.review.value;
         const img = loggedInUser.photoURL;
         console.log(name, city, review, img);
-        fetch('https://nextlevel1.herokuapp.com/addReview', {
+        fetch('http://localhost:8888/addReview', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({name, city, review, img})

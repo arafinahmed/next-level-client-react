@@ -23,7 +23,7 @@ const CourseStatus = () => {
     const [allStudents, setAllStudents] = useState([]);
     const rows = allStudents;
     useEffect(() => {
-        fetch('https://nextlevel1.herokuapp.com/allStudents')
+        fetch('http://localhost:8888/allStudents')
             .then(res => res.json())
             .then(data => setAllStudents(data));
     }, []);

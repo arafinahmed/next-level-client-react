@@ -5,7 +5,7 @@ import CourseCard from '../CourseCard/CourseCard';
 const Courses = () => {
     const [allCourses, setAllCourses] = useState([]);
     useEffect(() => {
-        fetch('https://nextlevel1.herokuapp.com/allCourses')
+        fetch('http://localhost:8888/allCourses')
         .then(res => res.json())
         .then(data => setAllCourses(data));
     }, []);

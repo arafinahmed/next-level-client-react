@@ -8,7 +8,7 @@ import Review from '../Review/Review';
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://nextlevel1.herokuapp.com/reviews')
+        fetch('http://localhost:8888/reviews')
         .then(res => res.json())
         .then(data => setReviews(data))
     }, []);
@@ -21,7 +21,7 @@ const Reviews = () => {
                </div>
                <div className="card-deck mt-5">
                     {
-                        reviews.map(review => <Review review={review} key={review.name}/>)
+                        reviews.map(review => <Review review={review} key={review._id}/>)
                     }
                 </div>
            </div>
