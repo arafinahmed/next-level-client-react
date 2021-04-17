@@ -18,6 +18,8 @@ import MyCourses from './components/Dashboard/MyCourses/MyCourses';
 import AddReview from './components/Dashboard/AddReview/AddReview';
 import ManageCourses from './components/Dashboard/MangeCourses/ManageCourses';
 import CourseStatus from './components/Dashboard/CourseStatus/CourseStatus';
+import NotFound from './components/NotFound/NotFound';
+
 export const ContextApi = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -43,7 +45,6 @@ function App() {
           <Route exact path="/account/:login">
             <LoginPage></LoginPage>
           </Route>
-
           <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
           </PrivateRoute>
@@ -73,13 +74,14 @@ function App() {
               <PrivateRoute path="/addReview">
                 <AddReview></AddReview>
               </PrivateRoute>
+              <Route exact path="*">
+                <NotFound></NotFound>
+              </Route>
             </>
           }
-
-
-
         </Switch>
         <Footer></Footer>
+
       </Router>
     </ContextApi.Provider>
   );
