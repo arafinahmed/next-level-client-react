@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     if (loggedInUser.email) {
-      fetch(`http://localhost:8888/isAdmin?email=${loggedInUser.email}`)
+      fetch(`https://nextlevel1.herokuapp.com/isAdmin?email=${loggedInUser.email}`)
         .then(res => res.json())
         .then(data => setIsAdmin(data))
     }

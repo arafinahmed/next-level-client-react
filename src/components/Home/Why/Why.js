@@ -15,13 +15,13 @@ const datas = [
         img: image2,
         title: "Trusted content",
         description: "Created by experts, Khan Academy’s library of trusted practice and lessons covers math, science, and more. Always free for learners and teachers.",
-        id: 1
+        id: 2
     },
     {
         img: image3,
         title: "Tools to empower teachers",
         description: "With NEXT Level, teachers can identify gaps in their students’ understanding, tailor instruction, and meet the needs of every student.",
-        id: 1
+        id: 3
     }
 
 ]
