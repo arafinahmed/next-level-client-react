@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
-
+import './SimpleCardForm.css';
 const SimpleCardForm = ({handlePaymentSuccess}) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -42,7 +42,9 @@ const SimpleCardForm = ({handlePaymentSuccess}) => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className="simple-card-form">
       <CardElement />
+      </div>
       <br/>
       <button className="btn btn-success" type="submit" disabled={!stripe}>
         Pay

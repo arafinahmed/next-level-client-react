@@ -19,6 +19,7 @@ import AddReview from './components/Dashboard/AddReview/AddReview';
 import ManageCourses from './components/Dashboard/MangeCourses/ManageCourses';
 import CourseStatus from './components/Dashboard/CourseStatus/CourseStatus';
 import NotFound from './components/NotFound/NotFound';
+import Courses from './components/Home/Courses/Courses';
 
 export const ContextApi = createContext();
 function App() {
@@ -41,6 +42,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home></Home>
+          </Route>
+          <Route path="/courses">
+            <Courses></Courses>
           </Route>
           <Route exact path="/account/:login">
             <LoginPage></LoginPage>
@@ -65,18 +69,20 @@ function App() {
                 <CourseStatus></CourseStatus>
               </PrivateRoute>
             </> : <>
-              <PrivateRoute path="/checkout">
-                <Checkout></Checkout>
-              </PrivateRoute>
-              <PrivateRoute path="/mycourses">
-                <MyCourses></MyCourses>
-              </PrivateRoute>
-              <PrivateRoute path="/addReview">
-                <AddReview></AddReview>
-              </PrivateRoute>
-              <Route exact path="*">
-                <NotFound></NotFound>
-              </Route>
+              <Switch>
+                <PrivateRoute path="/checkout">
+                  <Checkout></Checkout>
+                </PrivateRoute>
+                <PrivateRoute path="/mycourses">
+                  <MyCourses></MyCourses>
+                </PrivateRoute>
+                <PrivateRoute path="/addReview">
+                  <AddReview></AddReview>
+                </PrivateRoute>
+                <Route exact path="*">
+                  <NotFound></NotFound>
+                </Route>
+              </Switch>
             </>
           }
         </Switch>

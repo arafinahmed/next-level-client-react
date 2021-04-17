@@ -12,7 +12,7 @@ const CourseCard = ({course}) => {
     }
     return (
         <div className="course-card shadow-sm">
-            <img  src={`data:${course.img.contentType};base64,${course.img.img}`} alt=""/>
+            <img className="img-fluid" src={`data:${course.img.contentType};base64,${course.img.img}`} alt=""/>
             <div className="info-course-container">
             <h5>{course.title}</h5>
             <p>{course.shortDescription}</p>

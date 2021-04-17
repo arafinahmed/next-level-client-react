@@ -25,7 +25,7 @@ const NavigationBar = () => {
   return (
     <Navbar className="navigation-bg" collapseOnSelect expand="lg"  variant="light">
       <div className="container">
-        <Navbar.Brand>
+        <Navbar.Brand onClick={() => linkNavigate('/')} style={{ cursor: 'pointer' }}>
           NEXT Level
       </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

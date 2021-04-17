@@ -56,7 +56,7 @@ const NewCourse = () => {
                     <label htmlFor="shortDescription">Short Description</label>
                     <textarea name="shortDescription" class="form-control" rows="3"></textarea>
                     <br />
-                    <button className="btn btn-success">Make Admin</button>
+                    <button className="btn btn-success">Add</button>
                 </form>
             </div>
         </div>
