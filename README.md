@@ -13,7 +13,7 @@ For understanding this project check the component folder. And you can change as
 5. Hit `npm start` to run the project. 
 
 The server is running on: https://nextlevel1.herokuapp.com/
-If you want to change server code clone this repo also: https://github.com/Porgramming-Hero-web-course/complete-website-server-arafinahmed
+If you want to change server code clone this repo also: https://github.com/arafinahmed/next-level-server-node
 
 
 
